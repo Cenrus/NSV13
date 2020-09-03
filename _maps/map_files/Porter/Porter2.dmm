@@ -6754,13 +6754,6 @@
 	},
 /turf/open/floor/plasteel/ship,
 /area/space)
-"BC" = (
-/obj/effect/turf_decal/stripes/white/line{
-	dir = 8
-	},
-/obj/structure/overmap/fighter/prebuilt/raptor,
-/turf/open/floor/plating,
-/area/space)
 "BD" = (
 /obj/machinery/door/window/northleft{
 	base_state = "right";
@@ -9151,10 +9144,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/turf/open/floor/engine,
-/area/space)
-"LK" = (
-/obj/machinery/power/stormdrive_reactor,
 /turf/open/floor/engine,
 /area/space)
 "LO" = (
@@ -11908,9 +11897,6 @@
 /obj/machinery/camera{
 	c_tag = "Brig - Infirmary";
 	dir = 1
-	},
-/obj/item/clothing/under/rank/medical/purple{
-	pixel_y = -4
 	},
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -36065,7 +36051,7 @@ OL
 OL
 Ui
 yM
-BC
+yM
 Cj
 OL
 OL
@@ -37073,7 +37059,7 @@ OL
 OL
 Ui
 yM
-BC
+yM
 Cj
 OL
 OL
@@ -42125,7 +42111,7 @@ OL
 OL
 PH
 Kf
-LK
+eK
 Ot
 Dc
 lW
