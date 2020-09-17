@@ -33,6 +33,9 @@ endmap
 map jeppison
 endmap
 
+map theship
+endmap
+
 #map runtimestation
 	disabled
 endmap
