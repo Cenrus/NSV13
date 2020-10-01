@@ -21080,6 +21080,11 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/overmap/fighter/light,
+/obj/structure/disposalpipe/segment,
+>>>>>>> master
 /turf/open/floor/plating,
 /area/maintenance/department/science/central)
 "qPe" = (
@@ -24042,7 +24047,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/structure/overmap/fighter/heavy/prebuilt,
+/obj/structure/overmap/fighter/heavy,
 /turf/open/floor/plating,
 /area/nsv/hanger)
 "sWE" = (
@@ -25567,7 +25572,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/structure/overmap/fighter/light/prebuilt,
+/obj/structure/overmap/fighter/light,
 /turf/open/floor/plating,
 /area/nsv/hanger)
 "uiP" = (
@@ -28744,7 +28749,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/structure/overmap/fighter/light/prebuilt/flight_leader,
+/obj/structure/overmap/fighter/light/flight_leader,
 /turf/open/floor/plating,
 /area/nsv/hanger)
 "wJf" = (

@@ -4,7 +4,6 @@
 	name = "NTB-M4A1-IB prebuilt torpedo-casing"
 	icon_state = "case"
 	desc = "The outer casing of a 30mm torpedo."
-	density = TRUE
 	var/state = 0
 	var/obj/item/ship_weapon/parts/torpedo/warhead/wh = null
 	var/obj/item/ship_weapon/parts/torpedo/guidance_system/gs = null
