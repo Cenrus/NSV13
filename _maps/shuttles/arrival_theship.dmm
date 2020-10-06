@@ -5,7 +5,7 @@
 "g" = (/obj/machinery/light{dir = 8},/turf/open/floor/monotile,/area/space)
 "i" = (/obj/machinery/computer/ship/navigation/public{dir = 1; name = "starmap console"},/turf/open/floor/monotile/dark,/area/space)
 "l" = (/obj/structure/closet/emcloset,/obj/machinery/computer/ship/viewscreen,/turf/open/floor/monotile,/area/space)
-"o" = (/obj/structure/shuttle/engine/propulsion{dir = 1; icon_state = "propulsion"},/obj/docking_port/mobile/arrivals{dir = 2; height = 13; name = "theship arrivals shuttle"},/turf/open/floor/plating/airless,/area/space)
+"o" = (/obj/structure/shuttle/engine/propulsion{dir = 1; icon_state = "propulsion"},/obj/docking_port/mobile/arrivals{dir = 2; height = 14; name = "theship arrivals shuttle"},/turf/open/floor/plating/airless,/area/space)
 "p" = (/obj/structure/closet/emcloset,/obj/machinery/computer/lore_terminal,/turf/open/floor/monotile,/area/space)
 "t" = (/turf/closed/wall/mineral/titanium,/area/space)
 "w" = (/obj/machinery/light{dir = 4},/turf/open/floor/monotile,/area/space)
