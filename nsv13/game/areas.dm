@@ -40,6 +40,18 @@
 	name = "Deck 2 Medical Clinic"
 	icon_state = "medbay"
 
+/area/medical/nsv/psychology
+	name = "Psychology Office"
+	icon_state = "medbay"
+
+/area/medical/nsv/plumbing
+	name = "Chemical Manufacturing"
+	icon_state = "chem"
+	
+/area/science/nsv/astronomy
+	name = "Astrometrics Lab"
+	icon_state = "toxmisc"
+
 /area/nsv/engine/engine_room/core
 	name = "Engine Core"
 	icon_state = "engine_foyer"
@@ -183,6 +195,14 @@
 /area/maintenance/nsv/bridge
 	name = "Fore Bridge Maintenance"
 	icon_state = "maint_bridge"
+
+/area/maintenance/nsv/deck2/fore
+	name = "Deck 2 Starboard Fore Maintenance"
+	icon_state = "smaint"
+	
+/area/maintenance/nsv/deck2/aft
+	name = "Deck 2 Starboard Aft Maintenance"
+	icon_state = "amaint"
 
 /area/hallway/nsv/deck2/forward
 	name = "Deck 2 Forward Hallway"
@@ -369,9 +389,23 @@
 	name = "Launch Tubes 3 & 4"
 	icon_state = "hallS"
 
+/area/nsv/hanger/notkmcstupidhanger/launchtube/left/airlock
+	name = "Hangar Airlock 1"
+
+/area/nsv/hanger/notkmcstupidhanger/launchtube/right/airlock
+	name = "Hangar Airlock 2"
+
 /area/nsv/hanger/notkmcstupidhanger/hangar
 	name = "Hangar Bay"
 	icon_state = "hallC"
+
+/area/nsv/hanger/notkmcstupidhanger/pilot
+	name = "Pilot Lounge"
+	icon_state = "shuttlered"
+
+/area/nsv/hanger/notkmcstupidhanger/atc
+	name = "Air Traffic Control"
+	icon_state = "shuttlered"
 
 /area/nsv/hanger/deck2/port
 	name = "Deck 2 Port Hanger Bay"
@@ -385,6 +419,10 @@
 	name = "Weapons Bay"
 	icon_state = "hallC"
 
+/area/nsv/weapons/ordnance
+	name = "Ordnance Handling Bay"
+	icon_state = "hallC"
+	
 /area/nsv/weapons/gauss
 	name = "Gauss Bay"
 	icon_state = "hallC"
@@ -419,6 +457,10 @@
 
 /area/nsv/crew_quarters/heads/maa
 	name = "Master At Arms' Office"
+	icon_state = "shuttlegrn"
+
+/area/nsv/squad
+	name = "Squad Equipment Room"
 	icon_state = "shuttlegrn"
 
 /area/nsv/shuttle
