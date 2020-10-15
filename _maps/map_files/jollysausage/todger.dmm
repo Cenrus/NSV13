@@ -5952,6 +5952,7 @@
 /area/chapel/main)
 "aoy" = (
 /obj/structure/table/wood,
+/obj/item/toy/plush/awakenedplushie,
 /turf/open/floor/wood,
 /area/nsv/crew_quarters/heads/maa)
 "aoz" = (
@@ -9139,11 +9140,12 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/lobby)
 "avd" = (
-/obj/structure/table/wood,
 /obj/structure/cable{
 	icon_state = "6-9"
 	},
-/obj/item/toy/plush/awakenedplushie,
+/obj/machinery/computer/ship/ordnance{
+	dir = 8
+	},
 /turf/open/floor/wood,
 /area/nsv/crew_quarters/heads/maa)
 "ave" = (
@@ -9155,6 +9157,7 @@
 /area/nsv/hanger)
 "avf" = (
 /obj/machinery/airalarm/directional/north,
+/obj/effect/landmark/nuclear_waste_spawner,
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
 "avg" = (
@@ -34312,6 +34315,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+"fMJ" = (
+/obj/effect/landmark/nuclear_waste_spawner,
+/turf/open/floor/plasteel/dark,
+/area/chapel/main)
 "fOV" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -34356,6 +34363,22 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+<<<<<<< HEAD
+=======
+"fRt" = (
+/obj/effect/landmark/nuclear_waste_spawner,
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
+"fSY" = (
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+>>>>>>> master
 "fTc" = (
 /obj/structure/cable{
 	icon_state = "1-6"
@@ -34856,6 +34879,61 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+<<<<<<< HEAD
+=======
+"hPn" = (
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/machinery/requests_console{
+	department = "Medical Bay";
+	departmentType = 3;
+	name = "Medical requests console";
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"hSx" = (
+/obj/structure/disposalpipe/segment{
+	color = "#afa";
+	dir = 4;
+	icon_state = "pipe";
+	name = "mail trunk disposal pipe"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"hTS" = (
+/obj/effect/landmark/nuclear_waste_spawner,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit/departure_lounge)
+"hZd" = (
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/firealarm/directional/north,
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"ifa" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/engine/engine_room)
+>>>>>>> master
 "ihv" = (
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 1
@@ -36301,6 +36379,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
 	},
+/obj/effect/landmark/nuclear_waste_spawner/strong,
 /turf/open/floor/plasteel,
 /area/engine/engine_room)
 "ran" = (
@@ -36504,6 +36583,40 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+<<<<<<< HEAD
+=======
+"sAJ" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/yellow,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer3{
+	dir = 8
+	},
+/obj/machinery/light,
+/obj/structure/disposalpipe/segment{
+	color = "#faa";
+	dir = 4;
+	name = "return trunk disposal pipe"
+	},
+/turf/open/floor/plasteel,
+/area/engine/armor)
+"sBI" = (
+/obj/machinery/atmospherics/pipe/layer_manifold,
+/obj/effect/turf_decal/tile/green,
+/obj/structure/bed/dogbed/vector,
+/mob/living/simple_animal/pet/hamster/vector,
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"sDR" = (
+/obj/structure/hull_plate,
+/obj/machinery/vending/wardrobe/muni_wardrobe,
+/turf/open/floor/plating/airless,
+/area/nsv/weapons/gauss)
+>>>>>>> master
 "sDS" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer1{
@@ -37080,6 +37193,37 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+<<<<<<< HEAD
+=======
+"vKU" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/obj/effect/landmark/nuclear_waste_spawner,
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"vLi" = (
+/obj/machinery/door/airlock/ship/medical{
+	name = "Virology";
+	req_access_txt = "39"
+	},
+/obj/machinery/door/firedoor/border_only/directional/west,
+/obj/machinery/door/firedoor/border_only/directional/east,
+/obj/structure/disposalpipe/segment{
+	color = "#afa";
+	dir = 4;
+	icon_state = "pipe";
+	name = "mail trunk disposal pipe"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+>>>>>>> master
 "vOC" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 4;
@@ -37116,6 +37260,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+"wfu" = (
+/obj/effect/landmark/nuclear_waste_spawner,
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
 "wgY" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/bar{
@@ -52586,7 +52734,7 @@ jWY
 abs
 gSL
 jeG
-jeG
+wfu
 jeG
 mww
 aeb
@@ -53377,7 +53525,7 @@ kgN
 fUz
 hbv
 cMY
-wbb
+vKU
 hua
 lxH
 wXj
@@ -59043,7 +59191,7 @@ avs
 aNe
 aBX
 aFJ
-ahL
+fRt
 aDK
 ahH
 ahH
@@ -62392,7 +62540,7 @@ afe
 afe
 afe
 afe
-afe
+hTS
 bjL
 aMk
 acq
@@ -67240,7 +67388,7 @@ aao
 abz
 adj
 aao
-aao
+fMJ
 aao
 aao
 aao
@@ -78807,7 +78955,7 @@ agF
 aRN
 abl
 abM
-aAw
+sDR
 bqA
 ano
 abo
