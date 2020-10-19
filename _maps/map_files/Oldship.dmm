@@ -701,13 +701,6 @@
 /obj/structure/closet/secure_closet/security/sec,
 /turf/open/floor/monotile,
 /area/space)
-"bPY" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/overmap/fighter/heavy/prebuilt,
-/turf/open/floor/plating,
-/area/space)
 "bQO" = (
 /obj/machinery/armour_plating_nanorepair_well{
 	apnw_id = "pegasusmain"
@@ -1638,13 +1631,6 @@
 	},
 /turf/open/floor/carpet/ship,
 /area/space)
-"eil" = (
-/obj/effect/turf_decal/stripes/red/line{
-	dir = 8
-	},
-/obj/structure/overmap/fighter/light/prebuilt,
-/turf/open/floor/plating,
-/area/space)
 "eiW" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/reactor/fuel_rods,
@@ -2236,13 +2222,6 @@
 	dir = 4
 	},
 /turf/open/floor/monotile/dark,
-/area/space)
-"ghM" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/overmap/fighter/light/prebuilt,
-/turf/open/floor/plating,
 /area/space)
 "giP" = (
 /obj/structure/table/wood,
@@ -3541,16 +3520,6 @@
 	},
 /turf/open/floor/carpet/red,
 /area/space)
-"kti" = (
-/obj/structure/rack,
-/obj/item/fighter_component/avionics,
-/obj/item/fighter_component/armour_plating/heavy/t1,
-/obj/item/fighter_component/armour_plating/light/t1,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/space)
 "kvu" = (
 /obj/structure/table/reinforced,
 /obj/item/paicard,
@@ -3575,16 +3544,6 @@
 "kCh" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/curtain/obscuring/grey,
-/turf/open/floor/plating,
-/area/space)
-"kCO" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/item/fighter_component/secondary/heavy/torpedo_rack/t1,
-/obj/item/fighter_component/primary/heavy/heavy_cannon/t1,
-/obj/item/fighter_component/targeting_sensor/heavy/t1,
-/obj/item/fighter_component/targeting_sensor/heavy/t1,
 /turf/open/floor/plating,
 /area/space)
 "kJx" = (
@@ -3945,8 +3904,6 @@
 /area/space)
 "lRp" = (
 /obj/structure/rack,
-/obj/item/fighter_component/fuel_tank/t1,
-/obj/item/fighter_component/countermeasure_dispenser/t1,
 /obj/item/fighter_component/apu,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -3985,19 +3942,6 @@
 /obj/item/stack/sheet/duranium/fifty,
 /obj/item/stack/sheet/duranium/fifty,
 /turf/open/floor/monotile/dark,
-/area/space)
-"lSm" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/item/fighter_component/targeting_sensor/heavy/t1,
-/obj/item/fighter_component/primary/light/light_cannon/t1,
-/obj/item/fighter_component/primary/light/light_cannon/t1,
-/obj/item/fighter_component/secondary/light/missile_rack/t1,
-/obj/item/fighter_component/secondary/heavy/torpedo_rack/t1,
-/obj/item/fighter_component/targeting_sensor/light/t1,
-/obj/item/fighter_component/targeting_sensor/light/t1,
-/turf/open/floor/plating,
 /area/space)
 "lSD" = (
 /obj/structure/chair/comfy/teal{
@@ -4411,7 +4355,6 @@
 /area/space)
 "mPl" = (
 /obj/structure/rack,
-/obj/item/fighter_component/engine/heavy/t1,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -5724,9 +5667,6 @@
 "qzM" = (
 /obj/structure/rack,
 /obj/item/fighter_component/avionics,
-/obj/item/fighter_component/countermeasure_dispenser/t1,
-/obj/item/fighter_component/engine/light/t1,
-/obj/item/fighter_component/fuel_tank/t1,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -6972,10 +6912,6 @@
 /obj/machinery/chem_master/condimaster,
 /turf/open/floor/monotile,
 /area/space)
-"tGX" = (
-/obj/structure/fighter_component/underconstruction_fighter/heavy_fighter_frame,
-/turf/open/floor/plating,
-/area/space)
 "tIm" = (
 /obj/machinery/computer/operating{
 	dir = 1;
@@ -7841,8 +7777,6 @@
 	dir = 8
 	},
 /obj/structure/table/reinforced,
-/obj/structure/fighter_component/light_chassis_crate,
-/obj/structure/fighter_component/light_chassis_crate,
 /turf/open/floor/plating,
 /area/space)
 "wuV" = (
@@ -8223,11 +8157,6 @@
 "xzT" = (
 /obj/machinery/disposal/bin,
 /turf/open/floor/monotile/dark,
-/area/space)
-"xBP" = (
-/obj/structure/overmap/fighter/light/prebuilt/flight_leader,
-/obj/effect/turf_decal/stripes/red/full,
-/turf/open/floor/plating,
 /area/space)
 "xDA" = (
 /obj/machinery/door/window/southright{
@@ -96013,7 +95942,7 @@ pSV
 tiu
 qzM
 jTD
-kti
+qzM
 lRp
 mPl
 tiu
@@ -96277,7 +96206,7 @@ dHk
 oxG
 pSV
 pSV
-tGX
+pSV
 pSV
 oxG
 pSV
@@ -96784,8 +96713,8 @@ pSV
 tiu
 oXO
 gbZ
-kCO
-lSm
+qLH
+qLH
 wuk
 tiu
 oxG
@@ -97048,7 +96977,7 @@ tiu
 oxG
 bVV
 qLH
-ghM
+qLH
 qDv
 oxG
 pSV
@@ -98847,7 +98776,7 @@ tiu
 oxG
 qMI
 kfM
-xBP
+kfM
 jrF
 oxG
 pSV
@@ -99875,7 +99804,7 @@ tiu
 oxG
 bVV
 qLH
-ghM
+qLH
 qDv
 oxG
 pSV
@@ -100903,7 +100832,7 @@ tiu
 oxG
 bVV
 qLH
-ghM
+qLH
 qDv
 oxG
 pSV
@@ -101931,7 +101860,7 @@ tiu
 oxG
 gnr
 ldV
-eil
+ldV
 vCI
 oxG
 pSV
@@ -102959,7 +102888,7 @@ tiu
 oxG
 bVV
 qLH
-bPY
+qLH
 qDv
 oxG
 pSV
