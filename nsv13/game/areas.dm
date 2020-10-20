@@ -196,12 +196,20 @@
 	name = "Fore Bridge Maintenance"
 	icon_state = "maint_bridge"
 
-/area/maintenance/nsv/deck2/fore
+/area/maintenance/nsv/deck2/starboard/fore
 	name = "Deck 2 Starboard Fore Maintenance"
 	icon_state = "smaint"
-	
-/area/maintenance/nsv/deck2/aft
+
+/area/maintenance/nsv/deck2/starboard/aft
 	name = "Deck 2 Starboard Aft Maintenance"
+	icon_state = "amaint"
+
+/area/maintenance/nsv/deck2/port/fore
+	name = "Deck 2 Port Fore Maintenance"
+	icon_state = "pmaint"
+	
+/area/maintenance/nsv/deck2/port/aft
+	name = "Deck 2 Port Aft Maintenance"
 	icon_state = "amaint"
 
 /area/hallway/nsv/deck2/forward
