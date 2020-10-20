@@ -370,15 +370,6 @@
 	},
 /turf/open/floor/monotile,
 /area/storage/primary)
-"agJ" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/ship/preopen{
-	dir = 4;
-	id = "atmos";
-	name = "Atmospherics Blast Door"
-	},
-/turf/open/floor/plating,
-/area/engine/atmos)
 "agS" = (
 /obj/machinery/status_display/evac,
 /turf/closed/wall/ship,
@@ -6454,14 +6445,6 @@
 	},
 /turf/open/floor/monotile/light,
 /area/crew_quarters/cryopods)
-"cvq" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/ship/preopen{
-	id = "atmos";
-	name = "Atmospherics Blast Door"
-	},
-/turf/open/floor/plating,
-/area/engine/atmos)
 "cvy" = (
 /obj/machinery/door/airlock/ship/maintenance/defaultaccess,
 /obj/machinery/door/firedoor/border_only/directional/north,
@@ -13374,6 +13357,10 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/monotile,
 /area/science/robotics/mechbay)
+"eHR" = (
+/obj/machinery/computer/ship/viewscreen,
+/turf/open/floor/plasteel/ship/techfloor/alt,
+/area/engine/engineering/hangar)
 "eHV" = (
 /obj/effect/landmark/start/cook,
 /turf/open/floor/monotile/light,
@@ -15375,6 +15362,18 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"frD" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/door/poddoor/ship{
+	dir = 1;
+	id = "Secure Storage";
+	name = "Secure Storage"
+	},
+/turf/open/floor/plating,
+/area/engine/storage_shared)
 "frL" = (
 /obj/structure/table,
 /turf/open/floor/wood,
@@ -16970,6 +16969,15 @@
 	},
 /turf/open/floor/monotile/dark,
 /area/chapel/main)
+"fYR" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/ship/preopen{
+	dir = 4;
+	id = "atmos";
+	name = "Atmospherics Blast Door"
+	},
+/turf/open/floor/plating,
+/area/engine/atmos)
 "fZg" = (
 /obj/effect/turf_decal/tile/red,
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -24398,6 +24406,20 @@
 	},
 /turf/open/floor/monotile,
 /area/nsv/squad)
+"ivR" = (
+/obj/structure/rack,
+/obj/item/electronics/airlock,
+/obj/item/electronics/airlock,
+/obj/item/electronics/airlock,
+/obj/item/electronics/airlock,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/wallframe/camera,
+/obj/item/wallframe/camera,
+/obj/item/wallframe/camera,
+/obj/item/wallframe/camera,
+/turf/open/floor/monotile/dark,
+/area/space)
 "iwd" = (
 /obj/docking_port/stationary{
 	dir = 4;
@@ -37350,6 +37372,16 @@
 	},
 /turf/open/floor/monotile/dark,
 /area/security/checkpoint/engineering)
+"nff" = (
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/machinery/door/airlock/ship/maintenance/defaultaccess,
+/turf/open/floor/plating,
+/area/space)
 "nfn" = (
 /turf/open/floor/plasteel/grid/lino,
 /area/security/warden)
@@ -40747,10 +40779,6 @@
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/engine/co2,
 /area/engine/atmos)
-"ooB" = (
-/obj/machinery/computer/ship/viewscreen,
-/turf/open/floor/plasteel/ship/techfloor/alt,
-/area/engine/engineering/hangar)
 "ooF" = (
 /obj/machinery/camera/autoname{
 	dir = 4
@@ -46488,6 +46516,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
 /turf/open/floor/monotile/light,
 /area/medical/medbay/aft)
 "qwX" = (
@@ -48176,20 +48208,6 @@
 /obj/item/storage/firstaid/radbgone,
 /turf/open/floor/noslip/dark,
 /area/space)
-"rbF" = (
-/obj/structure/rack,
-/obj/item/electronics/airlock,
-/obj/item/electronics/airlock,
-/obj/item/electronics/airlock,
-/obj/item/electronics/airlock,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/wallframe/camera,
-/obj/item/wallframe/camera,
-/obj/item/wallframe/camera,
-/obj/item/wallframe/camera,
-/turf/open/floor/monotile/dark,
-/area/space)
 "rbJ" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -49047,18 +49065,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/monotile/dark,
 /area/teleporter)
-"rtf" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/obj/machinery/door/poddoor/ship{
-	dir = 1;
-	id = "Secure Storage";
-	name = "Secure Storage"
-	},
-/turf/open/floor/plating,
-/area/engine/storage_shared)
 "rtl" = (
 /obj/structure/sign/ship/medical,
 /turf/closed/wall/ship,
@@ -56314,6 +56320,14 @@
 /obj/structure/rack,
 /turf/open/floor/plating,
 /area/maintenance/nsv/deck2/port/fore)
+"ugf" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/ship/preopen{
+	id = "atmos";
+	name = "Atmospherics Blast Door"
+	},
+/turf/open/floor/plating,
+/area/engine/atmos)
 "ugn" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/quartermaster,
@@ -83451,7 +83465,7 @@ pSV
 pSV
 pSV
 vxo
-ooB
+eHR
 vqO
 lKT
 cwn
@@ -85260,7 +85274,7 @@ aGY
 aGY
 wBn
 aGY
-rbF
+ivR
 dbP
 dbP
 sge
@@ -88844,7 +88858,7 @@ eJJ
 eJJ
 nOa
 eJJ
-rtf
+frD
 gYZ
 aEX
 ovK
@@ -89101,7 +89115,7 @@ bqc
 eJJ
 eJJ
 eJJ
-rtf
+frD
 gYZ
 rMr
 eKU
@@ -92685,7 +92699,7 @@ wUX
 ome
 ome
 ome
-cvq
+ugf
 qsn
 sRk
 sRk
@@ -93199,7 +93213,7 @@ oTx
 bli
 ryV
 ryV
-cvq
+ugf
 iRw
 vvf
 jkW
@@ -93708,9 +93722,9 @@ vPC
 hlL
 ijq
 vPC
-agJ
+fYR
 lIa
-agJ
+fYR
 vPC
 vPC
 vPC
@@ -148472,7 +148486,7 @@ fuB
 jQq
 wIc
 pcr
-pSV
+nff
 pcr
 uZr
 uZr
@@ -149500,7 +149514,7 @@ aza
 aza
 pcr
 pcr
-pSV
+nff
 pcr
 uZr
 uZr
