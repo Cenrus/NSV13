@@ -220,6 +220,10 @@
 	name = "Deck 2 Primary Hallway"
 	icon_state = "hallP"
 
+/area/hallway/nsv/deck1/aft
+	name = "Deck 1 Aft Hallway"
+	icon_state = "hallP"
+
 /area/hallway/nsv/deck2/aft
 	name = "Deck 2 Aft Hallway"
 	icon_state = "hallP"
