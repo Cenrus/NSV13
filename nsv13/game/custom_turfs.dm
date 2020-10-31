@@ -396,6 +396,9 @@
 	broken_states = list("techfloor_grid_dam1")
 	burnt_states = list("techfloor_grid_scorched1", "techfloor_grid_scorched2")
 
+/turf/open/floor/plasteel/grid/techfloor/grid/airless
+	initial_gas_mix = AIRLESS_ATMOS
+	
 /obj/item/stack/tile/plasteel/grid/techfloor/grid
 	name = "techfloor tile"
 	singular_name = "techfloor hull plating tile"

@@ -52,6 +52,10 @@
 	name = "Astrometrics Lab"
 	icon_state = "toxmisc"
 
+/area/nsv/engine/corridor
+	name = "Engineering Corridor"
+	icon_state = "aux_base_construction"
+	
 /area/nsv/engine/engine_room/core
 	name = "Engine Core"
 	icon_state = "engine_foyer"
@@ -87,6 +91,10 @@
 /area/maintenance/nsv/deck1/port
 	name = "Deck 1 Port Maintenance"
 	icon_state = "pmaint"
+
+/area/maintenance/nsv/deck1/central
+	name = "Deck 1 Central Maintenance"
+	icon_state = "maintcentral"
 
 /area/maintenance/nsv/deck1/starboard
 	name = "Deck 1 Starboard Maintenance"
@@ -360,6 +368,10 @@
 /area/hallway/nsv/deck1/frame1/central
 	name = "Deck 1 Frame 1 Central Hallway"
 	icon_state = "hallC"
+
+/area/hallway/nsv/deck1/frame1/starboard
+	name = "Deck 1 Frame 1 Starboard Hallway"
+	icon_state = "hallS"
 
 /area/hallway/nsv/deck1/frame2/port
 	name = "Deck 1 Frame 2 Port Hallway"
