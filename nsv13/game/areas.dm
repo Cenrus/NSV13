@@ -36,6 +36,10 @@
 	icon_state = "Sleep"
 	safe = TRUE
 
+/area/crew_quarters/dorms/nsv/state_room
+	name = "Corporate Stateroom"
+	icon_state = "Sleep"
+
 /area/medical/nsv/clinic
 	name = "Deck 2 Medical Clinic"
 	icon_state = "medbay"
@@ -218,6 +222,10 @@
 	
 /area/maintenance/nsv/deck2/port/aft
 	name = "Deck 2 Port Aft Maintenance"
+	icon_state = "amaint"
+
+/area/maintenance/nsv/weapons
+	name = "Weapons Bay Maintenance"
 	icon_state = "amaint"
 
 /area/hallway/nsv/deck2/forward
