@@ -104,6 +104,10 @@
 	name = "Deck 1 Starboard Maintenance"
 	icon_state = "smaint"
 
+/area/maintenance/nsv/deck1/aft
+	name = "Deck 1 Aft Maintenance"
+	icon_state = "amaint"
+	
 /area/maintenance/nsv/deck2/port
 	name = "Deck 2 Port Maintenance"
 	icon_state = "pmaint"
