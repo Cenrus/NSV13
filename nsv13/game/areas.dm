@@ -104,9 +104,21 @@
 	name = "Deck 1 Starboard Maintenance"
 	icon_state = "smaint"
 
+/area/maintenance/nsv/deck1/starboard/aft
+	name = "Deck 1 Starboard Aft Maintenance"
+	icon_state = "smaint"
+
 /area/maintenance/nsv/deck1/aft
 	name = "Deck 1 Aft Maintenance"
 	icon_state = "amaint"
+	
+/area/maintenance/nsv/deck1/port/aft
+	name = "Deck 1 Port Aft Maintenance"
+	icon_state = "pmaint"	
+	
+/area/maintenance/nsv/deck1/port/fore
+	name = "Deck 1 Port Fore Maintenance"	
+	icon_state = "pmaint"	
 	
 /area/maintenance/nsv/deck2/port
 	name = "Deck 2 Port Maintenance"
@@ -230,6 +242,10 @@
 
 /area/maintenance/nsv/weapons
 	name = "Weapons Bay Maintenance"
+	icon_state = "amaint"
+
+/area/maintenance/nsv/hangar
+	name = "Hangar Bay Maintenance"
 	icon_state = "amaint"
 
 /area/hallway/nsv/deck2/forward
