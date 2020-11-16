@@ -1,6 +1,5 @@
 /*
 Todo:
-
 Ammo loading
 Startup sequence
 Docking [X]
@@ -8,7 +7,6 @@ Unified construction
 Death state / Crit mode (Canopy breach?)
 Hardpoints [X]
 Repair
-
 */
 
 
@@ -55,7 +53,7 @@ Repair
 	sprite_size = 32
 	damage_states = TRUE
 	faction = "nanotrasen"
-	max_integrity = 150 //Really really squishy!
+	max_integrity = 200 //Really really squishy!
 	forward_maxthrust = 5
 	backward_maxthrust = 5
 	side_maxthrust = 4
@@ -63,7 +61,7 @@ Repair
 	torpedoes = 0
 	missiles = 0
 	speed_limit = 7 //We want fighters to be way more maneuverable
-	weapon_safety = FALSE //This happens wayy too much for my liking. Starts OFF.
+	weapon_safety = TRUE //This happens wayy too much for my liking. Starts ON.
 	pixel_w = -16
 	pixel_z = -20
 	req_one_access = list(ACCESS_FIGHTER)
@@ -74,7 +72,6 @@ Repair
 	var/loadout_type = LOADOUT_DEFAULT_FIGHTER
 	var/datum/component/ship_loadout/loadout = null
 	var/obj/structure/fighter_launcher/mag_lock = null //Mag locked by a launch pad. Cheaper to use than locate()
-	var/obj/structure/last_overmap = null
 	var/canopy_open = TRUE
 	var/master_caution = FALSE //The big funny warning light on the dash.
 	var/list/components = list() //What does this fighter start off with? Use this to set what engine tiers and whatever it gets.
@@ -214,6 +211,17 @@ Repair
 				return
 			to_chat(usr, "<span class='notice>You uninstall [target.name] from [src].</span>")
 			loadout.remove_hardpoint(FC)
+		if("dump_hardpoint")
+			if(!target)
+				return
+			var/obj/item/fighter_component/FC = target
+			if(!istype(FC) || !FC.contents?.len)
+				return
+			to_chat(usr, "<span class='notice'>You start to unload [target.name]'s stored contents...</span>")
+			if(!do_after(usr, 5 SECONDS, target=src))
+				return
+			to_chat(usr, "<span class='notice>You dump [target.name]'s contents.</span>")
+			loadout.dump_contents(FC)
 		if("kick")
 			if(!target)
 				return
@@ -300,7 +308,7 @@ Repair
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 60, "energy" = 30, "bomb" = 30, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 80, "overmap_light" = 10, "overmap_heavy" = 5)
 	sprite_size = 32
 	damage_states = FALSE //temp
-	max_integrity = 125 //Really really squishy!
+	max_integrity = 200 //Really really squishy!
 	max_angular_acceleration = 200
 	speed_limit = 10
 	pixel_w = -16
@@ -372,6 +380,10 @@ Repair
 						/obj/item/fighter_component/secondary/utility/resupply,
 						/obj/item/fighter_component/countermeasure_dispenser)
 
+/obj/structure/overmap/fighter/utility/mining
+	icon = 'nsv13/icons/overmap/nanotrasen/carrier_mining.dmi'
+	req_one_access = list(ACCESS_CARGO, ACCESS_MINING, ACCESS_MUNITIONS, ACCESS_ENGINE, ACCESS_FIGHTER)
+
 /obj/structure/overmap/fighter/escapepod
 	name = "Escape Pod"
 	desc = "An escape pod launched from a space faring vessel. It only has very limited thrusters and is thus very slow."
@@ -405,7 +417,7 @@ Repair
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 50, "bomb" = 50, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 80, "overmap_light" = 25, "overmap_heavy" = 10)
 	sprite_size = 32
 	damage_states = FALSE //TEMP
-	max_integrity = 200 //Not so squishy!
+	max_integrity = 300 //Not so squishy!
 	pixel_w = -16
 	pixel_z = -20
 	speed_limit = 8
@@ -481,11 +493,13 @@ Repair
 
 /obj/structure/overmap/fighter/MouseDrop_T(atom/movable/target, mob/user)
 	. = ..()
+	if(!isliving(user))
+		return FALSE
 	for(var/slot in loadout.equippable_slots)
 		var/obj/item/fighter_component/FC = loadout.get_slot(slot)
 		if(FC?.load(src, target))
 			return FALSE
-	if(allowed(user) && isliving(user))
+	if(allowed(user))
 		if(!canopy_open)
 			playsound(src, 'sound/effects/glasshit.ogg', 75, 1)
 			user.visible_message("<span class='warning'>You bang on the canopy.</span>", "<span class='warning'>[user] bangs on [src]'s canopy.</span>")
@@ -497,6 +511,8 @@ Repair
 		if(do_after(user, 2 SECONDS, target=src))
 			start_piloting(user, "observer")
 			enter(user)
+	else
+		to_chat(user, "<span class='warning'>Access denied.</span>")
 
 /obj/structure/overmap/fighter/proc/enter(mob/user)
 	user.forceMove(src)
@@ -654,6 +670,14 @@ Method to remove a hardpoint from the loadout. It can be passed a slot as a defi
 	if(component && istype(component))
 		component.remove_from(holder)
 
+/datum/component/ship_loadout/proc/dump_contents(slot)
+	var/obj/item/fighter_component/component = null
+	if(istype(slot, /obj/item/fighter_component))
+		component = slot
+	else
+		component = get_slot(slot)
+	component.dump_contents()
+
 /datum/component/ship_loadout/process()
 	for(var/slot in equippable_slots)
 		var/obj/item/fighter_component/component = hardpoint_slots[slot]
@@ -672,8 +696,20 @@ Method to remove a hardpoint from the loadout. It can be passed a slot as a defi
 	var/fire_mode = null //Used if this is a weapon style hardpoint
 	var/active = TRUE
 
+/obj/item/fighter_component/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Alt-click it to unload its contents.</span>"
+
 /obj/item/fighter_component/proc/toggle()
 	active = !active
+
+/obj/item/fighter_component/proc/dump_contents()
+	if(!contents?.len)
+		return FALSE
+	. = list()
+	for(var/atom/movable/AM in contents)
+		AM.forceMove(get_turf(loc))
+		. += AM
 
 /obj/item/fighter_component/proc/get_ammo()
 	return FALSE
@@ -1183,10 +1219,8 @@ If you need your hardpoint to be loaded with things by clicking the fighter
 	var/docking_cooldown = FALSE
 
 /*Weaponry!
-
 As a rule of thumb, primaries are small guns that take ammo boxes, secondaries are big guns that require big bulky objects to be loaded into them.
 Utility modules can be either one of these types, just ensure you set its slot to HARDPOINT_SLOT_UTILITY
-
 */
 /obj/item/fighter_component/primary
 	name = "Fuck you"
@@ -1199,6 +1233,14 @@ Utility modules can be either one of these types, just ensure you set its slot t
 	var/list/ammo = list()
 	var/burst_size = 1
 	var/fire_delay = 0
+
+/obj/item/fighter_component/primary/dump_contents()
+	. = ..()
+	for(var/atom/movable/AM in .)
+		if(AM == magazine)
+			magazine = null
+			ammo = list()
+			playsound(loc, 'nsv13/sound/effects/ship/mac_load.ogg', 100, 1)
 
 /obj/item/fighter_component/primary/get_ammo()
 	return ammo?.len
@@ -1310,6 +1352,13 @@ Utility modules can be either one of these types, just ensure you set its slot t
 	var/burst_size = 1 //Cluster torps...UNLESS?
 	var/fire_delay = 0.25 SECONDS
 
+/obj/item/fighter_component/secondary/dump_contents()
+	. = ..()
+	for(var/atom/movable/AM in .)
+		if(AM in ammo)
+			ammo -= AM
+			playsound(loc, 'nsv13/sound/effects/ship/mac_load.ogg', 100, 1)
+
 /obj/item/fighter_component/secondary/get_ammo()
 	return ammo.len
 
@@ -1348,6 +1397,19 @@ Utility modules can be either one of these types, just ensure you set its slot t
 	weight = 1
 	burst_size = 2
 	fire_delay = 0.10 SECONDS
+
+//Specialist item for the superiority fighter.
+/obj/item/fighter_component/secondary/ordnance_launcher/railgun
+	name = "Fighter Railgun"
+	desc = "A scaled down railgun designed for use in fighters."
+	icon_state = "railgun"
+	weight = 1
+	accepted_ammo = /obj/item/ship_weapon/ammunition/railgun_ammo
+	overmap_firing_sounds = list('nsv13/sound/effects/ship/railgun_fire.ogg')
+	burst_size = 1
+	fire_delay = 0.2 SECONDS
+	max_ammo = 10
+	tier = 1
 
 /obj/item/fighter_component/secondary/ordnance_launcher/torpedo
 	name = "Fighter Torpedo Launcher"
@@ -1430,9 +1492,10 @@ Utility modules can be either one of these types, just ensure you set its slot t
 	max_freight = 20
 
 /obj/item/fighter_component/primary/utility/hold/load(obj/structure/overmap/target, atom/movable/AM)
-	if(contents && contents.len >= max_freight || isliving(AM) || istype(AM, /obj/item/fighter_component) || istype(AM, /obj/item/card/id) || istype(AM, /obj/item/pda)) //This just causess issues, trust me on this)
+	if(contents && contents.len >= max_freight || isliving(AM) || istype(AM, /obj/item/fighter_component) || istype(AM, /obj/item/card/id) || istype(AM, /obj/item/pda) || istype(AM, /obj/structure/overmap)) //This just causess issues, trust me on this)
 		return FALSE
-	AM.forceMove(src)
+	if((AM.move_resist > MOVE_FORCE_DEFAULT) || !AM.doMove(src))
+		return //Can't put ultra heavy stuff in
 	target.visible_message("[icon2html(src)] [AM] is loaded into the cargo hold")
 	playsound(target, 'nsv13/sound/effects/ship/mac_load.ogg', 100, 1)
 	return TRUE
@@ -1640,4 +1703,3 @@ Utility modules can be either one of these types, just ensure you set its slot t
 /obj/structure/overmap/fighter/proc/toggle_canopy()
 	canopy_open = !canopy_open
 	playsound(src, 'nsv13/sound/effects/fighters/canopy.ogg', 100, 1)
-
